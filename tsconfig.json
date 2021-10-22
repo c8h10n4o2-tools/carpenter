@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "declaration": true
+    },
+    "extends": "@tsconfig/node16/tsconfig.json",
+    "include": ["src/**/*"]
+  }
