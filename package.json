@@ -1,8 +1,8 @@
 {
-  "name": "carpenter",
-  "version": "0.0.1",
+  "name": "@yoteetools/carpenter",
+  "version": "0.0.2",
   "description": "a simple SQL query builder written in typescript",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:yoteetools/carpenter.git",
   "author": "Kevin Faulhaber",
   "license": "MIT",
