@@ -1,6 +1,6 @@
 {
   "name": "@yoteetools/carpenter",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "description": "a simple SQL query builder written in typescript",
   "main": "dist/index.js",
   "repository": "git@github.com:yoteetools/carpenter.git",
@@ -16,7 +16,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "yarn publish --non-interactive --access public"
   },
   "engines": {
     "node": "16"
