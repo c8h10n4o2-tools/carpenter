@@ -6,6 +6,6 @@ export interface WhereStatement {
 }
 
 export interface JoinStatement {
-    type: "INNER" | "OUTER" | "LEFT" | "RIGHT" | "FULL",
-    statement: string;
+  type: "INNER" | "OUTER" | "LEFT" | "RIGHT" | "FULL";
+  statement: string;
 }
