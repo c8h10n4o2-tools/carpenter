@@ -1,7 +1,7 @@
-import Carpenter from './carpenter';
+import Carpenter from "./carpenter";
 
 export default {
-    from: (fromStatement: string) => {
-        return new Carpenter(fromStatement);
-    } 
-}
+  from: (fromStatement: string) => {
+    return new Carpenter(fromStatement);
+  },
+};
