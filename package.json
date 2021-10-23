@@ -1,6 +1,6 @@
 {
   "name": "@yoteetools/carpenter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a simple SQL query builder written in typescript",
   "main": "dist/index.js",
   "repository": "git@github.com:yoteetools/carpenter.git",
