@@ -2,11 +2,11 @@ import { SQL } from "./constants";
 import buildJoin from "./join";
 import buildRaw from "./raw";
 import buildSelect from "./select";
-import { JoinType, WhereStatement } from "./types";
+import { JoinStatement, JoinType, WhereStatement } from "./types";
 import buildWhere from "./where";
 
 class Carpenter {
-  private joinStatements: string[];
+  private joinStatements: JoinStatement[];
   private whereStatements: WhereStatement[];
   private rawStatements: string[];
   private selectStatements: string[];
@@ -56,7 +56,7 @@ class Carpenter {
   }
 
   private join(joinType: JoinType, joinStatement: string) {
-    this.joinStatements.push(joinType, SQL.JOIN, joinStatement);
+    this.joinStatements.push({ type: joinType, statement: joinStatement });
   }
 
   innerJoin(joinStatement: string) {
