@@ -51,7 +51,7 @@ jobs:
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
       - run:
           name: Publish package
-          command: yarn publish --non-interactive --access public
+          command: yarn publish --new-version $CIRCLE_TAG --access public
 
 workflows:
   version: 2
