@@ -16,8 +16,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "jest",
-    "deploy": "yarn publish --non-interactive --access public"
+    "test": "jest"
   },
   "engines": {
     "node": "16"

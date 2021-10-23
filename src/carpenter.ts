@@ -1,6 +1,7 @@
 import { SQL } from "./constants";
 import buildJoin from "./join";
 import buildRaw from "./raw";
+import buildSelect from "./select";
 import { JoinType, WhereStatement } from "./types";
 import buildWhere from "./where";
 
@@ -9,14 +10,25 @@ class Carpenter {
     private joinStatements: string[];
     private whereStatements: WhereStatement[];
     private rawStatements: string[];
+    private selectStatements: string[];
 
     constructor(
-        private selectStatement: string,
         private fromStatement: string
     ){
         this.joinStatements = [];
         this.whereStatements = [];
         this.rawStatements = [];
+        this.selectStatements = [];
+    }
+
+    /**
+     * Method that meorizes a SELECT statement.
+     * Method can be called multiple times and the
+     * select statements will be joined by a ','
+     */
+    select(selectStatement: string) {
+        this.selectStatements.push(selectStatement);
+        return this;
     }
 
     /**
@@ -92,7 +104,7 @@ class Carpenter {
     toString() {
         return [
             SQL.SELECT, 
-            this.selectStatement, 
+            buildSelect(this.selectStatements), 
             SQL.FROM, 
             this.fromStatement,
             buildJoin(this.joinStatements),
